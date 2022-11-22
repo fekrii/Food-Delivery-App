@@ -1,0 +1,335 @@
+{
+	"info": {
+		"_postman_id": "49ecafce-52d7-45a6-8fb0-8a47ff0a13cf",
+		"name": "EYouth",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18673655"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"item": [
+				{
+					"name": "register_customer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_data\": {\r\n        \"email\": \"customer@mail.com\",\r\n        \"phone\": \"01005170441\",\r\n        \"password\": \"test\"\r\n    },\r\n    \"profile\": {\r\n        \"type\":\"customer\",\r\n        \"firstName\": \"customer\",\r\n        \"lastName\": \"customer\",\r\n        \"gender\": \"Male\",\r\n        \"birthDate\": \"2019-11-11\",\r\n        \"address\": \"\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/auth/register/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"auth",
+								"register",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "register_resturant",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_data\": {\r\n        \"email\": \"resturant@mail.com\",\r\n        \"phone\": \"01005170441\",\r\n        \"password\": \"test\"\r\n    },\r\n    \"profile\": {\r\n        \"type\":\"resturant\",\r\n        \"name\": \"resturant\",\r\n        \"address\": \"\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/auth/register/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"auth",
+								"register",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "register_driver",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_data\": {\r\n        \"email\": \"driver@mail.com\",\r\n        \"phone\": \"01005170441\",\r\n        \"password\": \"test\"\r\n    },\r\n    \"profile\": {\r\n        \"type\":\"driver\",\r\n        \"name\": \"driver\",\r\n        \"address\": \"\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/auth/register/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"auth",
+								"register",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"customer@mail.com\",\r\n    \"password\": \"test\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/auth/login/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"auth",
+						"login",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_create_product",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjY5MTI2MzUwLCJpYXQiOjE2NjkxMTkxNTAsImp0aSI6IjI4MTZjOWJiYjhiMTQ2M2Q4NzE1MmM4N2Y2ZTg4NTA4IiwidXNlcl9pZCI6M30.Wge3T68Ct6HD7qlXA4UWxoB2F26SSWMYuZn6NsdrhMQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"postman product 4\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/products/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"products",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_create_menu",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjY5MTI3NTI5LCJpYXQiOjE2NjkxMjAzMjksImp0aSI6ImFkZjMwODU5MDhlZTRiMjc5N2Y0YmUyZjdkMWVhMDk2IiwidXNlcl9pZCI6Mn0.bTUNFzaURRyI7GjmpMniYdPZNrmeN8931ENh2HtWfi0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"menu 2\",\r\n    \"products\": [\r\n        2,3\r\n    ],\r\n    \"resturant\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/menu/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"menu",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "retrieve_update_delete Product( Resturant only )",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/products/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"products",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "retrieve_update_delete Menu( Resturant only )",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/menu/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"menu",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cancel order",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjY5MTMzMjAwLCJpYXQiOjE2NjkxMjYwMDAsImp0aSI6ImNmZWRmMjVlNmNkYjQyMjM4YmI4ZjQ4YTRiN2QyNDVmIiwidXNlcl9pZCI6Nn0.TWAmLKT917r578MkEpmOgO6Dv0d4DvnlCo7puaTh93E",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"postman order 4\",\r\n    \"resturant\": 1,\r\n    \"products\": [\r\n        2,3,5\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/order/1/cancel/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"order",
+						"1",
+						"cancel",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "change order status",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjY5MTM0NzE2LCJpYXQiOjE2NjkxMjc1MTYsImp0aSI6IjNiZDNhNDEwZDQ3YzQxYjk5NmQ1ZjU0MDc2ODgzOTEwIiwidXNlcl9pZCI6NH0.lZxSiyvqCatjZrkqLLT7oE2vq71c3Ryx3eCweJXUbQ8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/order/1/change_status/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"order",
+						"1",
+						"change_status",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
