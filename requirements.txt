@@ -21,6 +21,7 @@ django-timezone-field==5.0
 djangorestframework==3.14.0
 djangorestframework-simplejwt==5.2.2
 drf-yasg==1.21.4
+gunicorn==20.1.0
 idna==3.4
 inflection==0.5.1
 itypes==1.2.0
@@ -47,5 +48,4 @@ uritemplate==4.1.1
 urllib3==1.26.12
 vine==5.0.0
 wcwidth==0.2.5
-gunicorn
-whitenoise
+whitenoise==6.2.0
