@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-u!o#@6v0w5^!@-2%3r^5x3m%_l&ibws@x74l#j7%-g33l7=gsy'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['localhost', 'food-delivery-app22.herokuapp.com']
 
@@ -32,6 +32,7 @@ ALLOWED_HOSTS = ['localhost', 'food-delivery-app22.herokuapp.com']
 # Application definition
 
 INSTALLED_APPS = [
+    'django.contrib.admindocs',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
