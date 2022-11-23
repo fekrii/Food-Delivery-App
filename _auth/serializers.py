@@ -21,54 +21,6 @@ class CustomUserSerializer(serializers.ModelSerializer):
         ]
         extra_kwargs = {"password": {"write_only": True}}
 
-# class adminProfileSerializer(serializers.ModelSerializer):
-#     user = CustomUserSerializer(read_only=True)
-#     class Meta:
-#         model = AdminProfile
-#         fields = [
-#             "user",
-#             "firstName",
-#             "lastName",
-#             "gender",
-#             "birthDate",
-#             "address",
-#             "created_at",
-#             "updated_at"
-#         ]
-#         read_only_fields = ['user']
-
-#     def create(self, validated_data):
-#         with transaction.atomic():
-#             user_input_data = self.context.get('user_data')
-#             user = CustomUser.objects.create(
-#                 email=user_input_data['email'],
-#                 password=make_password(user_input_data['password']),
-#                 phone=user_input_data['phone'],
-
-#                 # we can turn it to activated=False for security
-#                 # (meaning that user must be activated from our side first before logging in)
-#                 activated=True,
-#                 is_admin=True,
-#                 is_superuser=True,
-#                 is_staff=True
-#             )
-#             if user:
-#                 user.save()
-#                 try:
-#                     new_profile = AdminProfile.objects.create(
-#                         user=user,
-#                         firstName=validated_data["firstName"],
-#                         lastName=validated_data["lastName"],
-#                         gender=validated_data["gender"],
-#                         birthDate=validated_data["birthDate"],
-#                         address=validated_data["address"],
-#                     )
-#                     return new_profile
-#                 except:
-#                     IntegrityError("A user with that email already exists"),
-#                     DataError("The data provided is not valid")
-#             else:
-#                 raise ValidationError("Serializer could not create a user object")
 
 class CustomerProfileSerializer(serializers.ModelSerializer):
     user = CustomUserSerializer(read_only=True)

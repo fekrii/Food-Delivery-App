@@ -4,7 +4,6 @@ from django.contrib.auth.models import (
     PermissionsMixin
 )
 from django.db import models
-import uuid
 
 
 class CustomUsersManager(BaseUserManager):
@@ -62,30 +61,7 @@ class CustomUser(AbstractBaseUser, PermissionsMixin):
         ordering = ['-date_joined']
 
 
-# class AdminProfile(models.Model):
 
-#     gender = (
-
-#         ("Male", "male"),
-
-#         ("Female", "female"),
-
-#         ("Other", "other")
-
-#     )
-
-#     user = models.OneToOneField(CustomUser, related_name="admin_profile", on_delete=models.CASCADE)
-#     firstName = models.CharField(max_length=255, blank=True, null=True)
-#     lastName = models.CharField(max_length=255, blank=True, null=True)
-#     gender = models.CharField(max_length=10, choices=gender ,blank=True, null=True)
-#     birthDate = models.DateField(blank=True, null=True)
-#     address = models.CharField(max_length=100 , blank=True, null=True)
-#     # is already added in the customuser model,should be removed from here
-#     created_at = models.DateTimeField(auto_now_add=True)
-#     updated_at = models.DateTimeField(auto_now=True)
-
-#     def __str__(self):
-#         return self.firstName
 
 class CustomerProfile(models.Model):
 

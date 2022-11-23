@@ -17,7 +17,7 @@ app.autodiscover_tasks(lambda:settings.INSTALLED_APPS)
 app.conf.beat_schedule = {
     'add-every-day' :{
         'task' : 'send_notification',
-        'schedule' : crontab(minute=0, hour='12')
+        'schedule' : crontab(minute=0, hour='24')
     }
 }
 

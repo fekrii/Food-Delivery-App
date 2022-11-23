@@ -114,20 +114,3 @@ class ProfileViewSet(viewsets.ModelViewSet):
                 "message": "Profile Data Couldn't be Retrieved"
             }, status=status.HTTP_400_BAD_REQUEST)
 
-    # get my profile by id
-    # def get_profile_by_id(self, request, id):
-    #     try:
-    #         user = CustomUser.objects.get(id=id)
-    #         profile = AdminProfile.objects.get(user=user)
-    #         serializer = CustomUserSerializer(profile)
-    #         return Response({
-    #             "success": True,
-    #             "data": serializer.data,
-    #             "message": "Profile Data Retrieved Successfully"
-    #         }, status=status.HTTP_200_OK)
-    #     except:
-    #         return Response({
-    #             "success": True,
-    #             "data": None,
-    #             "message": "Profile Data Couldn't be Retrieved"
-    #         }, status=status.HTTP_400_BAD_REQUEST)

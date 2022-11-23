@@ -66,9 +66,6 @@ class CustomUserAdmin(UserAdmin):
     filter_horizontal = ()
 
 
-# class AdminProfileAdmin(admin.ModelAdmin):
-#     list_display = ('user', 'firstName', 'lastName', 'gender', 'birthDate',
-#                     'address', 'created_at', 'updated_at')
 
 class CustomerProfileAdmin(admin.ModelAdmin):
     list_display = ('user', 'firstName', 'lastName', 'gender', 'birthDate',
@@ -84,7 +81,6 @@ class DriverProfileAdmin(admin.ModelAdmin):
 
 
 admin.site.register(CustomUser, CustomUserAdmin)
-# admin.site.register(AdminProfile, AdminProfileAdmin)
 admin.site.register(CustomerProfile, CustomerProfileAdmin)
 admin.site.register(ResturantProfile, ResturantProfileAdmin)
 admin.site.register(DriverProfile, DriverProfileAdmin)
